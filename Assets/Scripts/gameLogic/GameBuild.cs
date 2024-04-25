@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -13,17 +15,12 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         deck = new Deck();
-        //Utils.BuildMaterialsFromImages(deck);   call this only once to create materials from card images for each new skin everything have to be in the right folder for it to work
+        //ImagesToMatsUtils.BuildMaterialsFromImages(deck);  //TODO - remove. call this only once to create materials from card images for each new skin everything have to be in the right folder for it to work
         playerCards = GameObject.FindGameObjectsWithTag("EmptySpot");
-        foreach (GameObject gameObject in playerCards) //Todo
+        foreach (GameObject gameObject in playerCards)
         {
             Card card = deck.GetNextCard();
-
-            // Material mat = new Material(Shader.Fin("Standard"));
-            //mat.
-
-
-            Material mat = Resources.Load("Materials/Ah", typeof(Material)) as Material;
+            Material mat = Resources.Load("Materials/cards/" + card.toString() , typeof(Material)) as Material;
             gameObject.GetComponent<Renderer>().material = mat;
         }
     }
