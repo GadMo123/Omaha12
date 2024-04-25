@@ -67,7 +67,7 @@ public class Card
     }
  
 
-    public override string ToString()
+    public string toString()
     {
         return "" + cardValue + ((char)suit);
     }

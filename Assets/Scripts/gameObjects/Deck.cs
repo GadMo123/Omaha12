@@ -34,7 +34,6 @@ public class Deck
 
     public Card GetNextCard()
     {
-        if (currentCardIndex == cards.Length) { return null; }
         currentCardIndex++;
         return cards[currentCardIndex - 1];
     }
