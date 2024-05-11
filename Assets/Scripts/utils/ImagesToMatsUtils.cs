@@ -33,7 +33,6 @@ public class ImagesToMatsUtils
             SaveImageAsMat(mat, path);
             card = deck.GetNextCard();
         }
-
     }
 
     public static float AdjustChannel(float colour,
