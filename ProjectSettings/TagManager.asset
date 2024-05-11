@@ -6,6 +6,9 @@ TagManager:
   tags:
   - EmptySpot
   - FullSpot
+  - BoardSpot
+  - TurnAndRiverSpot
+  - PlayerCards
   layers:
   - Default
   - TransparentFX

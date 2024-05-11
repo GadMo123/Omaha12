@@ -16,7 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         deck = new Deck();
         //ImagesToMatsUtils.BuildMaterialsFromImages(deck);  //TODO - remove. call this only once to create materials from card images for each new skin everything have to be in the right folder for it to work
-        playerCards = GameObject.FindGameObjectsWithTag("EmptySpot");
+        playerCards = GameObject.FindGameObjectsWithTag("PlayerCards");
         foreach (GameObject gameObject in playerCards)
         {
             Card card = deck.GetNextCard();
